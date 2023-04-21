@@ -2,6 +2,7 @@ package com.portfolioweb.argprog.Security.Service;
 
 import com.portfolioweb.argprog.Security.Entity.Usuario;
 import com.portfolioweb.argprog.Security.Repository.iUsuarioRepository;
+
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,11 +19,11 @@ public class UsuarioService {
         return iusuarioRepository.findByNombreUsuario(nombreUsuario);
     }
 
-    public boolean existByNombreUsuario(String nombreUsuario){
+    public boolean existsByNombreUsuario(String nombreUsuario){
         return iusuarioRepository.existsByNombreUsuario(nombreUsuario);
     }
 
-    public boolean existByEmail(String email){
+    public boolean existsByEmail(String email){
         return iusuarioRepository.existsByEmail(email);
     }
 
